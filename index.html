@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ufoStuff</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"/>
+    <script type="text/javascript" src="http://d3js.org/d3.v3.min.js"></script>
+    <script type="text/javascript" src="nav.js"></script>
+    <script type="text/javascript" src="d3.layout.cloud.js"></script>
+    <link rel="stylesheet" href="wordle.css" />
+    <link rel="stylesheet" type="text/css" href="d3.slider.css" media="screen" />
+    <link rel="stylesheet" href="main.css">
+
+    <script src="d3.slider.js"></script>
+    <style>
+        html, body, #vis {
+            height: 100%;
+            margin: 0;
+        }
+
+        .tooltip {
+            position: absolute;
+            opacity: 0;
+            border: solid;
+            border-color: #333 transparent;
+            border-width: 6px 6px 0 6px;
+            bottom: 20px;
+            content: "";
+            left: 50%;
+            z-index: 99;
+        }
+
+
+
+    </style>
+</head>
+
+<body>
+
+<div class="topnav">
+    <a class="active" href="index.html">Wordle</a>
+    <a href="relation.html">Word Relation</a>
+    <a href="map.html">Location Data</a>
+</div>
+
+<label for="minDate">Start date:</label>
+<input id="minDate" type="date" value="1949-10-10">
+
+<label for="maxDate">End date:</label>
+<input id="maxDate" type="date" value="2013-09-09">
+<button id="myBtn">Update</button>
+
+
+<div id="drop1"></div>
+<div id="drop2"></div>
+
+<div id="vis"></div>
+
+
+<script src="wordle.js"></script>
+
+</body>
+
+</html>
